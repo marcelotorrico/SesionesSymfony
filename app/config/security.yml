@@ -1,0 +1,42 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    encoders:
+        MTD\RegistroBundle\Entity\Estudiante: sha512
+    
+    providers:
+        usuario:
+            entity: { class: MTD\RegistroBundle\Entity\Estudiante, property: usuario }
+        
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        
+        secured_area:
+            pattern:    ^/
+            provider: usuario
+            anonymous: true
+            form_login:
+                login_path: /login
+                check_path: /login_check
+                #always_use_default_target_path: true
+                #default_target_path: /estudiante/inicio
+            logout:
+                path:   /logout
+                target : /login
+                
+    access_control:
+        - { path: /login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/registro/*, roles: ROLE_ADMIN }
+        - { path: ^/estudiante/*, roles: ROLE_USER }
+            
+            #anonymous: ~
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+

@@ -1,0 +1,17 @@
+mtd_registro_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MTDRegistroBundle:Default:index }
+    
+mtd_registro:
+    path:     /registro/index
+    defaults: { _controller: MTDRegistroBundle:Registro:index }
+    
+mtd_registro_login:
+    path:   /login
+    defaults:  { _controller: AcmeSecurityBundle:Security:login }
+    
+mtd_registro_login_check:
+    path:   /login_check
+    
+logout:
+    path : /logout

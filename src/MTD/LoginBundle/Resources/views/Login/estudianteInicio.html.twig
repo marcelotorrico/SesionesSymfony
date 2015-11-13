@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="container" style="text-align:center;">
+        <font FACE="courier"  color="blue">
+            <h1 id=""><b>MENU PRINCIPAL</b></h1>
+        </font>
+        </br>
+        <a href="/inscripciones/nueva.php"><button class="btn btn-primary glyphicon glyphicon-check">    Inscribirse      </button></a>
+        <a href="tareas.php"><button class="btn btn-primary glyphicon glyphicon-file ">     Ver Tareas      </button></a>
+        <a href="../../index.php"><button class="btn btn-primary glyphicon glyphicon-remove-circle"> Cerrar sesion </button></a>
+            <br><br><br>
+             <center>  
+
+        <div id = 'calendario'></div>
+        </center>
+        <script type="text/javascript" src="/js/calendario.js"></script>
+        <?php require "_cargarTareas.php"; ?>
+        </div>
+{% endblock %}

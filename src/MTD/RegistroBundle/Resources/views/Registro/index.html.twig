@@ -1,0 +1,125 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <script>alert('{{ flashMessage }}');</script>
+    {% endfor %}
+    {#{% for flashMessage in app.session.flashbag.get('notice') %}#}
+        {#<div class="flash-notice">#}
+            {#{{ flashMessage }}#}
+        {#</div>#}
+    {#{% endfor %}#}
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{path('mtd_registro_login')}}">Inicio </a>
+        </div>
+    </nav>
+    <br><br><br>
+	<div class="container">
+	    <font face="courier" color="blue">
+		<h1><b> Registro de un Estudiante</b></h1>
+            </font>
+                <br>
+                {{ form_start(form) }}
+                
+                    {{form_errors(form)}}
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.usuario, 'Nombre de Usuario:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.usuario, { 'attr': {'placeholder': 'Escriba un nombre de usuario', 'class': 'form-control inputGroup',
+                                                                     'title': 'Minimo 3 caracteres y Maximo 12. Los primeros tres caracteres tienen que ser letras.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.usuario) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.contrasena.first, 'Contraseña:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.contrasena.first, { 'attr': {'placeholder': 'Escriba una contraseña segura', 'class': 'form-control inputGroup',
+                                                                     'title': 'Ingrese una contraseña segura. Debe tener como minimo 5 caracteres.'} }) }}      
+                                    </div>
+                                    {{ form_errors(form.contrasena.first) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.contrasena.second, 'Repita su contraseña:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.contrasena.second, { 'attr': {'placeholder': 'Escriba su contraseña nuevamente', 'class': 'form-control inputGroup',
+                                                                     'title': 'Ingrese una contraseña segura. Debe tener como minimo 5 caracteres.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.contrasena.second) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.nombre, 'Nombre:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.nombre, { 'attr': {'placeholder': 'Escriba su nombre', 'class': 'form-control inputGroup',
+                                                                     'title': 'El nombre debe empezar con mayuscula.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.nombre) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.apellido, 'Apellido:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.apellido, { 'attr': {'placeholder': 'Escriba su apellido', 'class': 'form-control inputGroup',
+                                                                     'title': 'El apellido debe empezar con mayuscula.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.apellido) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.telefono, 'Telefono:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.telefono, { 'attr': {'placeholder': 'Escriba su numero de telefono', 'class': 'form-control inputGroup',
+                                                                     'title': 'Ingrese solo números validos.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.telefono) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.correo, 'Correo:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.correo, { 'attr': {'placeholder': 'Escriba su correo electronico', 'class': 'form-control inputGroup',
+                                                                     'title': 'Ingrese un correo valido.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.correo) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class ="form-group">
+                        <button type="submit" name="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Registrar</button>
+                    </div>
+                
+                
+                {{form_end(form) }}
+                
+	</div>
+{% endblock %}

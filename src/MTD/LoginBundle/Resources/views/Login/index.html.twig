@@ -1,0 +1,49 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <div class = "container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <h3><img src="{{ asset('imagenes/umss.png') }}" alt="Symfony!" ><font color='white'> <strong>UNIVERSIDAD MAYOR DE SAN SIMON &nbsp;&nbsp;&nbsp;</strong></h3>
+            </div>
+        </nav>
+        <br><br><br><br><br><br><br>
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                <br>
+                {% if error %}
+                    {#<div>{{ error.message }}</div>#}
+                    <script>alert('{{ error.message }}');</script>
+                {% endif %}
+                <form action="{{ path('mtd_registro_login_check') }}" method="post">
+                    <font FACE="courier">
+                        <center><h2><b>Ingresar al Sistema</b></h2></center>
+                    </font>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon addonGroup" >Nombre de Usuario:</span>
+                            <input class="form-control" type="text" name="_username" id="username" value="{{ last_username }}" placeholder="Ingrese nombre de usuario" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon addonGroup" >Contraseña:</span>
+                            <input class="form-control" type="password"  name="_password" id="password" placeholder="Ingrese su contraseña" required>
+                        </div>
+                    </div>
+                    {#<input type="hidden" name="_target_path" value="/estudiante/inicio" />#}
+                    <div class="form-group">
+                        <a class="btn btn-primary pull-left" href="{{path('mtd_registro')}}"> Regístrate</a>
+                        <button type="submit" name="ingresar" class="btn btn-primary pull-right" id="btn-registrarUser"><span class="glyphicon glyphicon-ok"></span> Ingresar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+                <font color="black">
+                    <center><b><h1>Bienvenido al Calendario de Tareas</h1></b></center>
+                    <center><img src="{{ asset('imagenes/agiles.jpg') }}" alt="portadaInicio" class="img-thumbnail" width="700" height="700"></center>
+                </font>
+            </div>
+        </div>
+    </div>
+{% endblock %}

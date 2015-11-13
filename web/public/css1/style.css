@@ -1,0 +1,46 @@
+body{
+    background: #F0F8FF;
+}
+
+.header{
+    background: blue;
+    color: #e7e7e7;
+}
+.color1{
+    background-color: blue;
+    color: white !important;
+}
+.drp{
+    margin-right: 15px;
+    display: inline-block !important;
+}
+.toggle{
+        padding: 15px !important;
+        display: block;
+        color: #f8f8f5;
+}
+.container .addonGroup{
+    width: 170px;
+}
+
+.addonGroup{
+    width: 170px;
+}
+
+.container .inputGroup{
+    width: 370px;
+}
+
+th{
+   color: black; 
+}
+
+h2 {
+	margin:8px 0;
+	padding:5px 30px;
+	font-size:24px;
+	line-height:30px;
+	font-weight:normal;
+	color:black;
+	border-radius:10px;
+}

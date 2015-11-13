@@ -1,0 +1,7 @@
+mtd_login_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MTDLoginBundle:Default:index }
+    
+mtd_estudiante_index:
+    path:     /estudiante/inicio
+    defaults: {_controller: MTDLoginBundle:Estudiante:index }
