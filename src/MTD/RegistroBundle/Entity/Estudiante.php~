@@ -4,6 +4,7 @@ namespace MTD\RegistroBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 
 
@@ -128,6 +129,7 @@ class Estudiante implements UserInterface, \Serializable
     
     /**
      * @ORM\ManyToMany(targetEntity="Roles", inversedBy="estudiante")
+     * @ORM\JoinTable(name="estudiante_roles")
      *
      */
      private $roles;

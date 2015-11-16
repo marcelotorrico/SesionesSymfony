@@ -399,5 +399,12 @@ class Estudiante implements UserInterface, \Serializable
     public function getRoles()
     {
         return $this->roles->toArray();
+        //return $this->roles;
+    }
+    
+    public function getRolesNuevos()
+    {
+        return $this->roles;
+        //return $this->roles;
     }
 }

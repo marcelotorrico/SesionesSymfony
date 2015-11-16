@@ -78,9 +78,12 @@
   'DoctrineBundle:Collector:db.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/db.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig',
   'MTDLoginBundle:Default:index.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\src\\MTD\\LoginBundle/Resources/views/Default/index.html.twig',
+  'MTDLoginBundle:Login:estudianteInicio.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\src\\MTD\\LoginBundle/Resources/views/Login/estudianteInicio.html.twig',
   'MTDLoginBundle:Login:index.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\src\\MTD\\LoginBundle/Resources/views/Login/index.html.twig',
   'MTDRegistroBundle:Default:index.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\src\\MTD\\RegistroBundle/Resources/views/Default/index.html.twig',
   'MTDRegistroBundle:Registro:index.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\src\\MTD\\RegistroBundle/Resources/views/Registro/index.html.twig',
+  'AcmeSecurityBundle:Default:index.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\src\\Acme\\SecurityBundle/Resources/views/Default/index.html.twig',
+  'AcmeSecurityBundle:Security:login.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\src\\Acme\\SecurityBundle/Resources/views/Security/login.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:ajax.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/ajax.html.twig',
   'WebProfilerBundle:Collector:config.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Collector/config.html.twig',
@@ -124,4 +127,5 @@
   '::base.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\app/Resources\\views/base.html.twig',
   ':default:index.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\app/Resources\\views/default/index.html.twig',
   '::layout.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\app/Resources\\views/layout.html.twig',
+  '::menu.html.twig' => 'C:\\xampp\\htdocs\\LoginSymfony\\app/Resources\\views/menu.html.twig',
 );

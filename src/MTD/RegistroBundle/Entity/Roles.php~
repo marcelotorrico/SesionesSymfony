@@ -3,6 +3,8 @@
 namespace MTD\RegistroBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\Role\RoleInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Roles
@@ -10,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="MTD\RegistroBundle\Entity\RolesRepository")
  */
-class Roles
+class Roles implements RoleInterface
 {
     /**
      * @var integer
@@ -35,6 +37,15 @@ class Roles
      */
     private $nombre;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Estudiante", mappedBy="roles")
+     */
+     private $estudiante;
+
+     public function __construct()
+     {
+         $this->estudiante = new ArrayCollection();
+     }
 
     /**
      * Get id
@@ -93,5 +104,36 @@ class Roles
     {
         return $this->nombre;
     }
-}
 
+    /**
+     * Add estudiante
+     *
+     * @param \sci\usuariosBundle\Entity\Usuarios $estudiante
+     * @return Roles
+     */
+    public function addEstudiante(\sci\usuariosBundle\Entity\Usuarios $estudiante)
+    {
+        $this->estudiante[] = $estudiante;
+        return $this;
+    }
+
+    /**
+     * Remove estudiante
+     *
+     * @param \sci\usuariosBundle\Entity\Usuarios $estudiante
+     */
+    public function removeEstudiante(\sci\usuariosBundle\Entity\Usuarios $estudiante)
+    {
+        $this->estudiante->removeElement($estudiante);
+    }
+
+    /**
+     * Get estudiante
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getEstudiante()
+    {
+        return $this->estudiante;
+    }
+}

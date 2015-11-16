@@ -42,15 +42,14 @@ class RegistroController extends Controller
                 $estudiante->setContrasena($password);
                 
                 $em = $this->getDoctrine()->getManager();
-                //$rol = new Roles();
+
                 $rol = $em->getRepository('MTDRegistroBundle:Roles')->findOneByRole('ROLE_USER');
-                //$rol->setRole('ROLE_USER');
-                $estudiante->getRoles()->add($rol);
-                
+                $estudiante->getRolesNuevos()->add($rol);
                 
                 $em->persist($estudiante);
+                //$em->persist($rol);             
                 $em->flush();
-                
+               
                 return $this->redirect($this->generateUrl('mtd_registro'));
             }
         }
