@@ -1,0 +1,50 @@
+{% block body %}
+    
+
+    <div class="container">
+	    <font face="courier" color="blue">
+		<h1><b> Registro  de una Materia</b></h1>
+            </font>
+                <br>
+                <div id="mensaje">
+                    
+                </div>
+                <div id="main">
+                {{ form_start(form) }}
+                
+                    {{form_errors(form)}}
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.materia, 'Nombre de Materia:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.materia, { 'attr': {'placeholder': 'Escriba un nombre de usuario', 'class': 'form-control inputGroup',
+                                                                     'title': 'Minimo 3 caracteres y Maximo 12. Los primeros tres caracteres tienen que ser letras.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.materia) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12">
+                                <div class ="form-group">
+                                    <div class="input-group">
+                                        {{ form_label(form.docente, 'Nombre del Docente:', {'label_attr': {'class': 'input-group-addon addonGroup'}}) }}
+                                        
+                                        {{ form_widget(form.docente, { 'attr': {'placeholder': 'Escriba un nombre de usuario', 'class': 'form-control inputGroup',
+                                                                     'title': 'Minimo 3 caracteres y Maximo 12. Los primeros tres caracteres tienen que ser letras.' } }) }}      
+                                    </div>
+                                    {{ form_errors(form.docente) }}
+                                </div>
+                            </div>
+                    </div>
+                    <div class ="form-group">
+                        <button type="submit" id ="enviar" name="enviar" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Registrar</button>
+                    </div>
+                
+                
+                {{form_end(form) }}
+                </div>
+    </div>
+{% endblock %}

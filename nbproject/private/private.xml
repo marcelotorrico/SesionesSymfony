@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/Listener/LoginListener.php</file>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/RegistroBundle/Controller/RegistroController.php</file>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/app/config/security.yml</file>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/RegistroBundle/Entity/Estudiante.php</file>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/app/config/services.yml</file>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/RegistroBundle/Resources/config/routing.yml</file>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/LoginBundle/Resources/views/Login/estudianteInicio.html.twig</file>
-            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/RegistroBundle/Entity/Roles.php</file>
+            <file>file:/C:/xampp/htdocs/LoginSymfony/web/public/js/registroMateria.js</file>
+            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/LoginBundle/Resources/views/Login/estudianteInscripcion.html.twig</file>
+            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/LoginBundle/Controller/EstudianteController.php</file>
+            <file>file:/C:/xampp/htdocs/LoginSymfony/web/public/js/guardar.js</file>
+            <file>file:/C:/xampp/htdocs/LoginSymfony/app/Resources/views/menu.html.twig</file>
+            <file>file:/C:/xampp/htdocs/LoginSymfony/src/MTD/LoginBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/xampp/htdocs/LoginSymfony/app/Resources/views/layout.html.twig</file>
         </group>
     </open-files>
 </project-private>

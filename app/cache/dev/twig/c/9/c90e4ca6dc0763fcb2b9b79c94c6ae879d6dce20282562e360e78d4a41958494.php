@@ -11,6 +11,7 @@ class __TwigTemplate_16a536b4052d82fbfa1912f1d00cd838ab56486fad19338ae09541a7f55
         $this->parent = $this->loadTemplate("layout.html.twig", "MTDRegistroBundle:Registro:index.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
+            'javascripts' => array($this, 'block_javascripts'),
         );
     }
 
@@ -21,20 +22,20 @@ class __TwigTemplate_16a536b4052d82fbfa1912f1d00cd838ab56486fad19338ae09541a7f55
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f39cd04ab0dce48d0bfa4de1a19db3bcacd008da3fcb883f2efe80bbf871dd0d = $this->env->getExtension("native_profiler");
-        $__internal_f39cd04ab0dce48d0bfa4de1a19db3bcacd008da3fcb883f2efe80bbf871dd0d->enter($__internal_f39cd04ab0dce48d0bfa4de1a19db3bcacd008da3fcb883f2efe80bbf871dd0d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MTDRegistroBundle:Registro:index.html.twig"));
+        $__internal_be74c46912fbf79274ce554a4f0847d3b1324f1effa932b1d034d306c45817ed = $this->env->getExtension("native_profiler");
+        $__internal_be74c46912fbf79274ce554a4f0847d3b1324f1effa932b1d034d306c45817ed->enter($__internal_be74c46912fbf79274ce554a4f0847d3b1324f1effa932b1d034d306c45817ed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "MTDRegistroBundle:Registro:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f39cd04ab0dce48d0bfa4de1a19db3bcacd008da3fcb883f2efe80bbf871dd0d->leave($__internal_f39cd04ab0dce48d0bfa4de1a19db3bcacd008da3fcb883f2efe80bbf871dd0d_prof);
+        $__internal_be74c46912fbf79274ce554a4f0847d3b1324f1effa932b1d034d306c45817ed->leave($__internal_be74c46912fbf79274ce554a4f0847d3b1324f1effa932b1d034d306c45817ed_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ff837181d5fdce9afaa30f52386ed9a57c6c55fc897d210c1cd9dc4b8e7d44d7 = $this->env->getExtension("native_profiler");
-        $__internal_ff837181d5fdce9afaa30f52386ed9a57c6c55fc897d210c1cd9dc4b8e7d44d7->enter($__internal_ff837181d5fdce9afaa30f52386ed9a57c6c55fc897d210c1cd9dc4b8e7d44d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0a78a5b4acb425e3f60828261f7a547647607e572d5659a5f0306370e044d777 = $this->env->getExtension("native_profiler");
+        $__internal_0a78a5b4acb425e3f60828261f7a547647607e572d5659a5f0306370e044d777->enter($__internal_0a78a5b4acb425e3f60828261f7a547647607e572d5659a5f0306370e044d777_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    ";
@@ -239,7 +240,7 @@ class __TwigTemplate_16a536b4052d82fbfa1912f1d00cd838ab56486fad19338ae09541a7f55
                             </div>
                     </div>
                     <div class =\"form-group\">
-                        <button type=\"submit\" name=\"submit\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-ok\"></span> Registrar</button>
+                        <button type=\"submit\" id =\"enviar\" name=\"enviar\" class=\"btn btn-primary\"><span class=\"glyphicon glyphicon-ok\"></span> Registrar</button>
                     </div>
                 
                 
@@ -251,7 +252,27 @@ class __TwigTemplate_16a536b4052d82fbfa1912f1d00cd838ab56486fad19338ae09541a7f55
 \t</div>
 ";
         
-        $__internal_ff837181d5fdce9afaa30f52386ed9a57c6c55fc897d210c1cd9dc4b8e7d44d7->leave($__internal_ff837181d5fdce9afaa30f52386ed9a57c6c55fc897d210c1cd9dc4b8e7d44d7_prof);
+        $__internal_0a78a5b4acb425e3f60828261f7a547647607e572d5659a5f0306370e044d777->leave($__internal_0a78a5b4acb425e3f60828261f7a547647607e572d5659a5f0306370e044d777_prof);
+
+    }
+
+    // line 127
+    public function block_javascripts($context, array $blocks = array())
+    {
+        $__internal_23adc205ef1862e000ed2eb72ed0759b9db7bff69e17bc5617c00e3dc1347db9 = $this->env->getExtension("native_profiler");
+        $__internal_23adc205ef1862e000ed2eb72ed0759b9db7bff69e17bc5617c00e3dc1347db9->enter($__internal_23adc205ef1862e000ed2eb72ed0759b9db7bff69e17bc5617c00e3dc1347db9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 128
+        echo "    ";
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+    <script src=\"";
+        // line 129
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("public/js/validarContrasena.js"), "html", null, true);
+        echo "\"></script>
+";
+        
+        $__internal_23adc205ef1862e000ed2eb72ed0759b9db7bff69e17bc5617c00e3dc1347db9->leave($__internal_23adc205ef1862e000ed2eb72ed0759b9db7bff69e17bc5617c00e3dc1347db9_prof);
 
     }
 
@@ -267,7 +288,7 @@ class __TwigTemplate_16a536b4052d82fbfa1912f1d00cd838ab56486fad19338ae09541a7f55
 
     public function getDebugInfo()
     {
-        return array (  248 => 122,  236 => 113,  232 => 111,  230 => 110,  225 => 108,  214 => 100,  210 => 98,  208 => 97,  203 => 95,  192 => 87,  188 => 85,  186 => 84,  181 => 82,  170 => 74,  166 => 72,  164 => 71,  159 => 69,  148 => 61,  144 => 59,  142 => 58,  137 => 56,  126 => 48,  122 => 46,  120 => 45,  115 => 43,  104 => 35,  100 => 33,  98 => 32,  93 => 30,  85 => 25,  80 => 23,  68 => 14,  64 => 12,  62 => 11,  60 => 10,  58 => 9,  56 => 8,  54 => 7,  45 => 5,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  271 => 129,  266 => 128,  260 => 127,  249 => 122,  237 => 113,  233 => 111,  231 => 110,  226 => 108,  215 => 100,  211 => 98,  209 => 97,  204 => 95,  193 => 87,  189 => 85,  187 => 84,  182 => 82,  171 => 74,  167 => 72,  165 => 71,  160 => 69,  149 => 61,  145 => 59,  143 => 58,  138 => 56,  127 => 48,  123 => 46,  121 => 45,  116 => 43,  105 => 35,  101 => 33,  99 => 32,  94 => 30,  86 => 25,  81 => 23,  69 => 14,  65 => 12,  63 => 11,  61 => 10,  59 => 9,  57 => 8,  55 => 7,  46 => 5,  41 => 4,  35 => 3,  11 => 1,);
     }
 }
 /* {% extends 'layout.html.twig' %}*/
@@ -387,7 +408,7 @@ class __TwigTemplate_16a536b4052d82fbfa1912f1d00cd838ab56486fad19338ae09541a7f55
 /*                             </div>*/
 /*                     </div>*/
 /*                     <div class ="form-group">*/
-/*                         <button type="submit" name="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Registrar</button>*/
+/*                         <button type="submit" id ="enviar" name="enviar" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Registrar</button>*/
 /*                     </div>*/
 /*                 */
 /*                 */
@@ -395,3 +416,8 @@ class __TwigTemplate_16a536b4052d82fbfa1912f1d00cd838ab56486fad19338ae09541a7f55
 /*                 */
 /* 	</div>*/
 /* {% endblock %}*/
+/*     */
+/* {% block javascripts %}*/
+/*     {{ parent() }}*/
+/*     <script src="{{ asset('public/js/validarContrasena.js') }}"></script>*/
+/* {% endblock %} */

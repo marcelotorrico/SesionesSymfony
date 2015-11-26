@@ -1742,7 +1742,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5649445e569aa6.02718884</argument>
+            <argument>56514b5bbec138.64436922</argument>
           </service>
         </argument>
       </argument>
@@ -2013,7 +2013,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5649445e569aa6.02718884</argument>
+            <argument>56514b5bbec138.64436922</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2574,6 +2574,7 @@
         <service class="Doctrine\ORM\Configuration" public="false">
           <call method="setEntityNamespaces">
             <argument type="collection">
+              <argument key="MTDLoginBundle">MTD\LoginBundle\Entity</argument>
               <argument key="MTDRegistroBundle">MTD\RegistroBundle\Entity</argument>
             </argument>
           </call>
@@ -2594,6 +2595,19 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
+                        <argument>C:\xampp\htdocs\LoginSymfony\src\MTD\LoginBundle\Entity</argument>
+                        <argument>C:\xampp\htdocs\LoginSymfony\src\MTD\RegistroBundle\Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>MTD\LoginBundle\Entity</argument>
+                </call>
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>C:\xampp\htdocs\LoginSymfony\src\MTD\LoginBundle\Entity</argument>
                         <argument>C:\xampp\htdocs\LoginSymfony\src\MTD\RegistroBundle\Entity</argument>
                       </argument>
                     </service>

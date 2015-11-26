@@ -15,8 +15,8 @@ class __TwigTemplate_ae0210dc141acecd993dac5be040284c05eb3fc872c85f2071953a5ab50
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8fac30879625fad4f8bd1477ab1116c5e5fee5e7ea509bd88a2e5ba560a30515 = $this->env->getExtension("native_profiler");
-        $__internal_8fac30879625fad4f8bd1477ab1116c5e5fee5e7ea509bd88a2e5ba560a30515->enter($__internal_8fac30879625fad4f8bd1477ab1116c5e5fee5e7ea509bd88a2e5ba560a30515_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "menu.html.twig"));
+        $__internal_cae50c18b58a3c90a6431cb528ca1436c8b28cba9e20ff324b348db7e18ebf71 = $this->env->getExtension("native_profiler");
+        $__internal_cae50c18b58a3c90a6431cb528ca1436c8b28cba9e20ff324b348db7e18ebf71->enter($__internal_cae50c18b58a3c90a6431cb528ca1436c8b28cba9e20ff324b348db7e18ebf71_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "menu.html.twig"));
 
         // line 1
         echo "<div class=\"\">
@@ -37,12 +37,15 @@ class __TwigTemplate_ae0210dc141acecd993dac5be040284c05eb3fc872c85f2071953a5ab50
                 <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                     <!--  <ul class=\"nav navbar-nav role=\"tablist\">     -->
                     <ul class=\"nav navbar-nav\">
-                        <li class=\"active\"><a href=\"#\">Link <span class=\"sr-only\">(current)</span></a></li>
+                        <li class=\"active\"><a href=\"";
+        // line 19
+        echo $this->env->getExtension('routing')->getPath("mtd_estudiante_inscripcionMateria");
+        echo "\">Registro Materia <span class=\"sr-only\">(current)</span></a></li>
                         <li><a href=\"#\">Link</a></li>
                         <li class=\"dropdown\">
                             <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Dropdown <span class=\"caret\"></span></a>
                             <ul class=\"dropdown-menu\">
-                                <li><a href=\"#\">Lista de Usuarios</a></li>
+                                <li><a href=\"#\" onclick=\"actualizar()\">Registro Materia</a></li>
                                 <li><a href=\"#\">Another action</a></li>
                                 <li><a href=\"#\">Something else here</a></li>
                                 <li role=\"separator\" class=\"divider\"></li>
@@ -79,9 +82,10 @@ class __TwigTemplate_ae0210dc141acecd993dac5be040284c05eb3fc872c85f2071953a5ab50
             </div><!-- /.container-fluid -->
         </nav>
     </header>
-</div>";
+</div>
+<div id=\"cuerpo\"></div>";
         
-        $__internal_8fac30879625fad4f8bd1477ab1116c5e5fee5e7ea509bd88a2e5ba560a30515->leave($__internal_8fac30879625fad4f8bd1477ab1116c5e5fee5e7ea509bd88a2e5ba560a30515_prof);
+        $__internal_cae50c18b58a3c90a6431cb528ca1436c8b28cba9e20ff324b348db7e18ebf71->leave($__internal_cae50c18b58a3c90a6431cb528ca1436c8b28cba9e20ff324b348db7e18ebf71_prof);
 
     }
 
@@ -97,7 +101,7 @@ class __TwigTemplate_ae0210dc141acecd993dac5be040284c05eb3fc872c85f2071953a5ab50
 
     public function getDebugInfo()
     {
-        return array (  64 => 41,  22 => 1,);
+        return array (  67 => 41,  42 => 19,  22 => 1,);
     }
 }
 /* <div class="">*/
@@ -118,12 +122,12 @@ class __TwigTemplate_ae0210dc141acecd993dac5be040284c05eb3fc872c85f2071953a5ab50
 /*                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*/
 /*                     <!--  <ul class="nav navbar-nav role="tablist">     -->*/
 /*                     <ul class="nav navbar-nav">*/
-/*                         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>*/
+/*                         <li class="active"><a href="{{path('mtd_estudiante_inscripcionMateria')}}">Registro Materia <span class="sr-only">(current)</span></a></li>*/
 /*                         <li><a href="#">Link</a></li>*/
 /*                         <li class="dropdown">*/
 /*                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>*/
 /*                             <ul class="dropdown-menu">*/
-/*                                 <li><a href="#">Lista de Usuarios</a></li>*/
+/*                                 <li><a href="#" onclick="actualizar()">Registro Materia</a></li>*/
 /*                                 <li><a href="#">Another action</a></li>*/
 /*                                 <li><a href="#">Something else here</a></li>*/
 /*                                 <li role="separator" class="divider"></li>*/
@@ -158,3 +162,4 @@ class __TwigTemplate_ae0210dc141acecd993dac5be040284c05eb3fc872c85f2071953a5ab50
 /*         </nav>*/
 /*     </header>*/
 /* </div>*/
+/* <div id="cuerpo"></div>*/

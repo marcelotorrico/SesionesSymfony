@@ -171,9 +171,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'mtd_login_homepage')), array (  '_controller' => 'MTD\\LoginBundle\\Controller\\DefaultController::indexAction',));
         }
 
-        // mtd_estudiante_index
-        if ($pathinfo === '/estudiante/inicio') {
-            return array (  '_controller' => 'MTD\\LoginBundle\\Controller\\EstudianteController::indexAction',  '_route' => 'mtd_estudiante_index',);
+        if (0 === strpos($pathinfo, '/estudiante/in')) {
+            // mtd_estudiante_index
+            if ($pathinfo === '/estudiante/inicio') {
+                return array (  '_controller' => 'MTD\\LoginBundle\\Controller\\EstudianteController::indexAction',  '_route' => 'mtd_estudiante_index',);
+            }
+
+            if (0 === strpos($pathinfo, '/estudiante/inscripcion')) {
+                // mtd_estudiante_inscripcionMateria
+                if ($pathinfo === '/estudiante/inscripcionMateria') {
+                    return array (  '_controller' => 'MTD\\LoginBundle\\Controller\\EstudianteController::inscripcionAction',  '_route' => 'mtd_estudiante_inscripcionMateria',);
+                }
+
+                // mtd_estudiante_inscripcion
+                if ($pathinfo === '/estudiante/inscripcion') {
+                    return array (  '_controller' => 'MTD\\LoginBundle\\Controller\\InscripcionMateriaController::inscripcionMateriaAction',  '_route' => 'mtd_estudiante_inscripcion',);
+                }
+
+            }
+
         }
 
         // homepage

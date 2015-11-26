@@ -5,3 +5,11 @@ mtd_login_homepage:
 mtd_estudiante_index:
     path:     /estudiante/inicio
     defaults: {_controller: MTDLoginBundle:Estudiante:index }
+    
+mtd_estudiante_inscripcionMateria:
+    path:     /estudiante/inscripcionMateria
+    defaults: {_controller: MTDLoginBundle:Estudiante:inscripcion }
+    
+mtd_estudiante_inscripcion:
+    path:     /estudiante/inscripcion
+    defaults: {_controller: MTDLoginBundle:InscripcionMateria:inscripcionMateria }

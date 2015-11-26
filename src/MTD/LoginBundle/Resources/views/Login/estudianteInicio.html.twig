@@ -2,6 +2,7 @@
 
 {% block body %}
     {{ parent() }}
+    <div id="mostrar">
     <div class="container" style="text-align:center;">
         <font FACE="courier"  color="blue">
             <h1 id=""><b>MENU PRINCIPAL</b></h1>
@@ -18,4 +19,5 @@
         <script type="text/javascript" src="/js/calendario.js"></script>
         <?php require "_cargarTareas.php"; ?>
         </div>
+    </div>
 {% endblock %}
